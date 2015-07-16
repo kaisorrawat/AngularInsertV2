@@ -1,0 +1,39 @@
+<!-- Add Customer -->
+<hr>
+<button type="button" class="btn btn-danger btn-lg btn-block glyphicon glyphicon-plus" ng-click="open()">&nbsp;Add Customer</button>
+<div class="table-responsive">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            List of Customer
+            <div class="sw-search">
+                <div class="nav-search">
+                    Sreach
+                    <span class="input-icon">
+                            <input type="text" placeholder="Sreach Cutomer list ..." class="nav-search-input" focus autocomplete="off"
+                            >  <i class="search-icon glyphicon glyphicon-search nav-search-icon"></i> 
+                        </span>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <table class="table table-striped">
+                <tr>
+                    <th>CustomerID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>CountryCode</th>
+                    <th>Budget</th>
+                    <th>Used</th>
+                </tr>
+                <tr ng-repeat="x in datas">
+                    <td>{{ x.ID }}</td>
+                    <td>{{ x.Name }}</td>
+                    <td>{{ x.Email }}</td>
+                    <td>{{ x.CountryCode }}</td>
+                    <td>{{ x.Budget }}</td>
+                    <td>{{ x.Used }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
